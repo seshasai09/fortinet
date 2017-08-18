@@ -23,10 +23,11 @@ Solutions to assessment
  * Whenever a new course is required by the school, school uses the CourseFactory to get the required course object.
  *
  * I have used the Pub-Sub design Pattern to Solve the problem of updating students in the course.
- * Every course has methods to register, unregister students and an abstract method to update students.
- * Every course has to provide implementation for the update method.
+ * Every course(Publisher) has methods to register, unregister students and an abstract method to update * students.
+ * Every course has to provide implementation for the update method. Student(Subscribes) allows the course
+ * to update it by invoking the updateFromCourse method.
  *
- * I have tried to simulate two schools by crating two threads.
+ * I have tried to simulate two schools by creating two threads.
  * Both the schools use the CourseFactory to obtain the courses.
  * Since CourseFactory is singleton only one instance is created.
  *
