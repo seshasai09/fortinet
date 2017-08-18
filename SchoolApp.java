@@ -1,9 +1,12 @@
-# fortinet
-Solutions to assessment 
+package fortinet;
 
-## Program to reverse a list and related test cases are present in the reverselistt folder
+/**
+ * Created by seshasai on 15/08/2017.
+ */
 
-## This is the scenario for Pub-Sub Design Pattern.
+
+import fortinet.course.CourseFactory;
+
 /**
  * This is a Program to simulate some functions/operations that happen in schools
  * The scenario that I am trying to simulate are
@@ -31,3 +34,18 @@ Solutions to assessment
  * Since CourseFactory is singleton only one instance is created.
  *
  * */
+
+public class SchoolApp {
+
+    public static void main(String[] args) throws InterruptedException {
+
+        Thread t1 = new Thread( new School("School 1"));
+        Thread t2 = new Thread( new School("School 2 "));
+        System.out.println("Factory instances created : " + CourseFactory.getNumberOfInstancesCreated());
+        t1.start();
+        t2.start();
+        Thread.sleep(5000);
+        System.out.println("Factory instances finally: " +CourseFactory.getNumberOfInstancesCreated());
+
+    }
+}
