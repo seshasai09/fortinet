@@ -10,29 +10,29 @@ public class ReverseListTests {
 
     @Test
     public void testNull(){
-        ReverseList reverseList = new ReverseList();
-        Assert.assertEquals("passing null object should return back null",reverseList.reverseList(null),null);
+        ListUtility listUtility = new ListUtility();
+        Assert.assertEquals("passing null object should return back null", listUtility.reverseList(null),null);
     }
 
     @Test
     public void testSingleNode(){
-        ReverseList reverseList = new ReverseList();
+        ListUtility listUtility = new ListUtility();
         Node head = new Node(1);
-        Assert.assertEquals("passing a single node should return back the same node",reverseList.reverseList(head),head);
+        Assert.assertEquals("passing a single node should return back the same node", listUtility.reverseList(head),head);
     }
 
     @Test
     public void testReverseTwoNodeList(){
-        ReverseList reverseList = new ReverseList();
+        ListUtility listUtility = new ListUtility();
         Node head = new Node(1);
         Node tail = new Node(2);
         head.next=tail;
-        Assert.assertEquals("On reversing the list, tail is the new head",reverseList.reverseList(head),tail);
+        Assert.assertEquals("On reversing the list, tail is the new head", listUtility.reverseList(head),tail);
     }
 
     @Test
     public void testRevrseList(){
-        ReverseList reverseList = new ReverseList();
+        ListUtility listUtility = new ListUtility();
         Node head = new Node(1);
         Node temp = head;
         Node last = null;
@@ -41,7 +41,7 @@ public class ReverseListTests {
             last= temp.next;
             temp = temp.next;
         }
-        Node newHead = reverseList.reverseList(head);
+        Node newHead = listUtility.reverseList(head);
 
         Assert.assertEquals("On reversing a list tail is the new head",newHead,last);
         while(newHead.next!=null)
