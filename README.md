@@ -1,4 +1,4 @@
-# fortinet
+# Fortinet
 Solutions to assessment 
 
 ## Program to reverse a list and related test cases are present in the reverselistt folder
