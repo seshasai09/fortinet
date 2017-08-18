@@ -3,8 +3,12 @@ package fortinet.student;
 import fortinet.course.Update;
 
 /**
- * Created by vasumathi on 15/08/2017.
+ * Created by seshasai on 15/08/2017.
  */
+
+/**
+ * This class is the Subscriber in the Pub-Sub design pattern.
+ * */
 public abstract class StudentAbstract {
 
     public String name;

@@ -2,6 +2,7 @@ package fortinet.student;
 
 import fortinet.course.Update;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -10,23 +11,10 @@ import java.util.List;
 public class Student extends StudentAbstract{
 
 
-    private List<String> coursesRegistered;
-
     public Student(String name, int id){
         this.name = name;
         this.studentId = id;
     }
-
-
-
-    public List<String> getCoursesRegistered() {
-        return coursesRegistered;
-    }
-
-    public void setCoursesRegistered(List<String> coursesRegistered) {
-        this.coursesRegistered = coursesRegistered;
-    }
-
 
     @Override
     public void updateFromCourse(Update update) {

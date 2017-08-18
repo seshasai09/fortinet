@@ -22,9 +22,13 @@ public class School implements Runnable{
         this.name = name;
     }
 
+    /**
+     * registering students for course.
+     */
     public boolean registerStudent(String name, Course courseName){
         for(Course course: coursesOffered){
             if(courseName.getCourseName().contentEquals(course.getCourseName())){
+
                 course.registerStudent(new Student(name,studentId++));
                 return true;
             }
@@ -33,6 +37,9 @@ public class School implements Runnable{
         return false;
     }
 
+    /**
+     * Adding courses to the school
+     */
     public void addCourses(Course course){
         if(coursesOffered == null){
             coursesOffered = new ArrayList<Course>();
@@ -40,6 +47,9 @@ public class School implements Runnable{
         coursesOffered.add(course);
     }
 
+    /**
+     * Update students who are registered for the course
+     */
     public void updateStudentsInCourse(String coursename, Update update){
 
         for(Course course : coursesOffered){
@@ -50,6 +60,11 @@ public class School implements Runnable{
         }
     }
 
+    /**
+     *Program kicks off by Adding courses to the school.
+     * Registering students to classes
+     * update the students who are registered for the course
+     */
 
     @Override
     public void run() {

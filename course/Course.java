@@ -8,6 +8,12 @@ import java.util.List;
 /**
  * Created by seshasai on 15/08/2017.
  */
+
+/**
+ * Course is the Publisher in the Pub-Sub design pattern.
+ * Students(Subscribers) register for the course.
+ * Course, update the students by invoking the updateFromCourse method in student class
+ * */
 public abstract class Course {
 
     public String getCourseName() {
