@@ -12,7 +12,7 @@ package fortinet.course;
 * */
 public class CourseFactory {
 
-    private static CourseFactory instance;
+    private static synchronized CourseFactory instance;
     private static int numberOfInstances;
 
 
