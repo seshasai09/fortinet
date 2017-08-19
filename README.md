@@ -31,4 +31,5 @@ Solutions to assessment
  * Both the schools use the CourseFactory to obtain the courses.
  * Since CourseFactory is singleton only one instance is created.
  *
+ * ### Run the program by running the SchoolApp.java file.
  * */
